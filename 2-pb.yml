@@ -1,0 +1,16 @@
+--- 
+- name: update web servers
+  hosts: web
+
+  tasks:
+  - name: ensure directory is created
+    file:
+      path: /home/test
+      state: directory
+      
+  - name: ensure file is updated
+    copy:
+      dest: /home/itproject/pb.conf
+      content: my configuration file for test
+
+...

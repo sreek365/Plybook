@@ -1,0 +1,11 @@
+
+---
+- name: update web servers
+  hosts: web 
+
+  tasks:
+  - name: ensure restarted the apache
+    service:
+      name : httpd
+      state: restarted
+...
